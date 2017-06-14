@@ -2,8 +2,6 @@ import Device from "../utils/Device";
 import {normalizeObjectToRadians} from "../utils/Math";
 import OrbitControls from "./OrbitControls";
 import CustomGyroControls from "./CustomGyroControls";
-//import GyroControls from "verse-three/controls/GyroControls";
-//import createLoop from "raf-loop";
 export default class Controls {
 
     constructor(camera, targetEl, controlsConfig = {}, deviceProps = {}) {

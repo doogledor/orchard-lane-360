@@ -1,5 +1,5 @@
 import {Scene, PerspectiveCamera, WebGLRenderer,OrthographicCamera} from "three";
-import Controls from "../controls/VerseControls";
+import Controls from "../controls/Orbit";
 import Device from "./Device";
 import {THEATER_RADIUS,CAMERA_FOV} from "../data/constants";
 

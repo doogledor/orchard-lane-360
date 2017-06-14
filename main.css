@@ -13,7 +13,7 @@ body{
 }@import "vars/controls-outer-margin";
 @import "vars/relative-z-indicies";
 
-._verse_three_VideoScene__root {
+._player_VideoScene__root {
     position: absolute;
   top:0;
   left:0;
@@ -21,7 +21,7 @@ body{
   height:100%;
     cursor: move;
     cursor: grab;
-    ._verse_three_VideoScene__video-scene--heading{
+    ._player_VideoScene__video-scene--heading{
         position: fixed;
         margin-bottom: var(--controls-outer-margin);
         bottom: 40px;
@@ -44,11 +44,11 @@ body{
     background-size: cover;*/
 }
 
-._verse_three_VideoScene__root:active{
+._player_VideoScene__root:active{
     cursor: grabbing;
 }
 
-._verse_three_VideoScene__hoveringItem {
+._player_VideoScene__hoveringItem {
     cursor: pointer;
 }
 
