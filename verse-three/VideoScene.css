@@ -1,0 +1,42 @@
+@import "vars/controls-outer-margin";
+@import "vars/relative-z-indicies";
+
+.root {
+    position: absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+    cursor: move;
+    cursor: grab;
+    .video-scene--heading{
+        position: fixed;
+        margin-bottom: var(--controls-outer-margin);
+        bottom: 40px;
+        right:var(--controls-outer-margin);
+        user-select:none;
+        cursor: auto;
+    }
+}
+
+:global(.screenshot) {
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: var(--control-button-z-index);
+    /*background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;*/
+}
+
+.root:active{
+    cursor: grabbing;
+}
+
+.hoveringItem {
+    cursor: pointer;
+}
+
