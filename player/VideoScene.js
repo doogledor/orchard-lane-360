@@ -16,6 +16,7 @@ import * as EventTypes from "./events/eventTypes";
 
 export default class VideoScene {
     constructor(videoEl, containerEl, config = {}) {
+        this.config = config
         this.store = createStore();
         this.videoEl = videoEl;
         this.renderBound = this.render.bind(this);
@@ -90,14 +91,12 @@ export default class VideoScene {
             this.baseContainer = new ContainerModel();
             this.baseContainer.setContext(this.createModelContext());
 
-            this.baseContainer.addChild(new VideoBackdrop({
-                videoEl: this.videoEl,
-            }));
+            if(!this.config.hide){
+                this.baseContainer.addChild(new VideoBackdrop({
+                    videoEl: this.videoEl,
+                }));
+            }
 
-            const hotspots = new Hotspots();
-            this.baseContainer.addChild(hotspots);
-
-            this.objectPicker = new ObjectPicker(this.renderingContext);
 
             scene.add(this.baseContainer.object3D);
             this.initialized = true;
@@ -132,7 +131,6 @@ export default class VideoScene {
         this.baseContainer.onBeforeFrameRendered();
         this.renderingContext.render();
         this.baseContainer.onAfterFrameRendered();
-        console.log("rer");
     }
 
     destroy() {

@@ -22,7 +22,7 @@ export const HOTSPOT_TEXT_DEPTH = 0.05;
 export const HOTSPOT_Z_DEPTH = 450;
 
 //sphere
-export const THEATER_RADIUS = 500;
+export const THEATER_RADIUS = 20;
 export const THEATER_GEO_SEG_H = 60;
 export const THEATER_GEO_SEG_V = 40;
 
